@@ -1,0 +1,301 @@
+import React from "react";
+import bue1 from "./pics/BUE.png";
+import { makeStyles } from "@material-ui/core/styles";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
+import "./body.css";
+const useStyles = makeStyles({
+  table: {
+    minWidth: 650,
+  },
+});
+const rows = [
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+];
+export default function Body3() {
+  const classes = useStyles();
+  return (
+    <div>
+      <div>
+        <img
+          src={bue1}
+          style={{
+            height: 100,
+            width: 200,
+            left: "80px",
+            position: "absolute",
+          }}
+        ></img>
+        <h2>Faculty of Informatics & Computer Science</h2>
+        <br /> <h2 style={{ color: "#074A80" }}>Interim Transcript</h2>
+        <hr
+          style={{
+            height: "1px",
+            backgroundColor: "black",
+          }}
+        ></hr>
+      </div>
+      <div
+        style={{
+          textAlign: "left",
+          marginTop: "40px",
+          marginLeft: "4em",
+          whiteSpace: "pre-wrap",
+        }}
+      >
+        <p>
+          Student ID: <b>163502</b> <br />{" "}
+        </p>
+        <p>
+          Student Name: <b>Habiba Khaled mansour </b>
+          <br />{" "}
+        </p>
+        <p>
+          Birth Date: <b> 15/8/1998</b>
+          <br />{" "}
+        </p>
+        <p>
+          Nationality: <b>Egypt</b>
+          <br />{" "}
+        </p>
+        <p>
+          Faculty:<b>:Faculty of Informatics & Computer Science</b>
+          <br />{" "}
+        </p>
+        <p>
+          Award Programme:<b>Computer Science & Information Systems</b>
+          <br />{" "}
+        </p>
+        <p>
+          Marking/Classification Scale:<b>UK</b>
+          <br />{" "}
+        </p>
+        <p>
+          Awarded Degree:<b>:UK</b>
+          <br />{" "}
+        </p>
+        <p>
+          Current Academic Standing:<b>Graduated</b>
+        </p>{" "}
+        <h3>Degree Year Three 2017-2018</h3>
+        <h2 style={{ color: "#074A80", textAlign: "left" }}>Semester 1</h2>
+      </div>
+      <div>
+        <center>
+          <Paper elevation={6} style={{ width: "90%", marginTop: "2%" }}>
+            <TableContainer component={Paper}>
+              <Table
+                className={classes.table}
+                size="small"
+                aria-label="a dense table"
+              >
+                <TableHead style={{ backgroundColor: "#BF112B" }}>
+                  <TableRow>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
+                    >
+                      Module Code
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
+                    >
+                      Module Name
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Module Level
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Module Credit
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Attempts
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Acceptance Date
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows.map((row) => (
+                    <TableRow key={row.name}>
+                      <TableCell align="center">{row.ModuleCode}</TableCell>
+                      <TableCell align="center">{row.ModuleName}</TableCell>
+                      <TableCell align="center">{row.ModuleLevel}</TableCell>
+                      <TableCell align="center">{row.ModuleCredit}</TableCell>
+                      <TableCell align="center">{row.Attempts}</TableCell>
+                      <TableCell align="center">{row.AcceptanceDate}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </Paper>
+        </center>
+        <div
+          style={{
+            textAlign: "left",
+            marginTop: "40px",
+            marginLeft: "4em",
+            whiteSpace: "pre-wrap",
+          }}
+        >
+          <h2 style={{ color: "#074A80", textAlign: "left" }}>Semester 2</h2>
+        </div>
+        <center>
+          <Paper elevation={6} style={{ width: "90%", marginTop: "2%" }}>
+            <TableContainer component={Paper}>
+              <Table
+                className={classes.table}
+                size="small"
+                aria-label="a dense table"
+              >
+                <TableHead style={{ backgroundColor: "#BF112B" }}>
+                  <TableRow>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
+                    >
+                      Module Code
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
+                    >
+                      Module Name
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Module Level
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Module Credit
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Attempts
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Acceptance Date
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows.map((row) => (
+                    <TableRow key={row.name}>
+                      <TableCell align="center">{row.ModuleCode}</TableCell>
+                      <TableCell align="center">{row.ModuleName}</TableCell>
+                      <TableCell align="center">{row.ModuleLevel}</TableCell>
+                      <TableCell align="center">{row.ModuleCredit}</TableCell>
+                      <TableCell align="center">{row.Attempts}</TableCell>
+                      <TableCell align="center">{row.AcceptanceDate}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </Paper>
+        </center>
+      </div>
+    </div>
+  );
+}

@@ -55,7 +55,7 @@ export default function Footer() {
             }}
           ></img>
         </center>
-        <h3 style={{ color: "White", left: "525px", position: "absolute" }}>
+        <h3 style={{ color: "White", textAlign: "center" }}>
           Get conact with us on social media{" "}
         </h3>
         <img

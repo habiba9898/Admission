@@ -20,75 +20,15 @@ const rows = [
     ModuleName: "English Upper-Intermediate",
     ModuleLevel: "P",
     ModuleCredit: "10",
+    Assesments: "Unseen Exam 73",
+    Grade: "B+",
+    CreditAward: "10",
     Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
+    Status: "",
   },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
+  { Assesments: "Presentation 73" },
 ];
-export default function Body3() {
+export default function EnglishTranscript() {
   const classes = useStyles();
   return (
     <div>
@@ -103,7 +43,7 @@ export default function Body3() {
           }}
         ></img>
         <h2>Faculty of Informatics & Computer Science</h2>
-        <br /> <h2 style={{ color: "#074A80" }}>Interim Transcript</h2>
+        <br /> <h2 style={{ color: "#074A80" }}>English Transcript</h2>
         <hr
           style={{
             height: "1px",
@@ -187,21 +127,39 @@ export default function Body3() {
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="left"
+                      align="center"
                     >
                       Module Credit
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="left"
+                      align="center"
+                    >
+                      Assesments
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
+                    >
+                      Grade
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
+                    >
+                      Credit Award
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
                     >
                       Attempts
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="left"
+                      align="center"
                     >
-                      Acceptance Date
+                      Status
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -212,8 +170,11 @@ export default function Body3() {
                       <TableCell align="center">{row.ModuleName}</TableCell>
                       <TableCell align="center">{row.ModuleLevel}</TableCell>
                       <TableCell align="center">{row.ModuleCredit}</TableCell>
+                      <TableCell align="center">{row.Assesments}</TableCell>
+                      <TableCell align="center">{row.Grade}</TableCell>
+                      <TableCell align="center">{row.CreditAward}</TableCell>
                       <TableCell align="center">{row.Attempts}</TableCell>
-                      <TableCell align="center">{row.AcceptanceDate}</TableCell>
+                      <TableCell align="center">{row.Status}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -261,21 +222,39 @@ export default function Body3() {
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="left"
+                      align="center"
                     >
                       Module Credit
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="left"
+                      align="center"
+                    >
+                      Assesments
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
+                    >
+                      Grade
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
+                    >
+                      Credit Award
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
                     >
                       Attempts
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="left"
+                      align="center"
                     >
-                      Acceptance Date
+                      Status
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -286,8 +265,11 @@ export default function Body3() {
                       <TableCell align="center">{row.ModuleName}</TableCell>
                       <TableCell align="center">{row.ModuleLevel}</TableCell>
                       <TableCell align="center">{row.ModuleCredit}</TableCell>
+                      <TableCell align="center">{row.Assesments}</TableCell>
+                      <TableCell align="center">{row.Grade}</TableCell>
+                      <TableCell align="center">{row.CreditAward}</TableCell>
                       <TableCell align="center">{row.Attempts}</TableCell>
-                      <TableCell align="center">{row.AcceptanceDate}</TableCell>
+                      <TableCell align="center">{row.Status}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

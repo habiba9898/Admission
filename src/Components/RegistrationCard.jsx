@@ -9,6 +9,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import "./body.css";
+import { Button } from "@material-ui/core";
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
@@ -20,15 +21,75 @@ const rows = [
     ModuleName: "English Upper-Intermediate",
     ModuleLevel: "P",
     ModuleCredit: "10",
-    Assesments: "Unseen Exam 73",
-    Grade: "B+",
-    CreditAward: "10",
     Attempts: "1",
-    Status: "",
+    AcceptanceDate: "30/9/2019, 16.29",
   },
-  { Assesments: "Presentation 73" },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
+  {
+    ModuleCode: "17CSC128H",
+    ModuleName: "English Upper-Intermediate",
+    ModuleLevel: "P",
+    ModuleCredit: "10",
+    Attempts: "1",
+    AcceptanceDate: "30/9/2019, 16.29",
+  },
 ];
-export default function Body1() {
+export default function RegistrationCard() {
   const classes = useStyles();
   return (
     <div>
@@ -43,7 +104,7 @@ export default function Body1() {
           }}
         ></img>
         <h2>Faculty of Informatics & Computer Science</h2>
-        <br /> <h2 style={{ color: "#074A80" }}>English Transcript</h2>
+        <br /> <h2 style={{ color: "#074A80" }}>Registration Card</h2>
         <hr
           style={{
             height: "1px",
@@ -127,39 +188,21 @@ export default function Body1() {
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
+                      align="left"
                     >
                       Module Credit
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
-                    >
-                      Assesments
-                    </TableCell>
-                    <TableCell
-                      style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
-                    >
-                      Grade
-                    </TableCell>
-                    <TableCell
-                      style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
-                    >
-                      Credit Award
-                    </TableCell>
-                    <TableCell
-                      style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
+                      align="left"
                     >
                       Attempts
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
+                      align="left"
                     >
-                      Status
+                      Acceptance Date
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -170,11 +213,8 @@ export default function Body1() {
                       <TableCell align="center">{row.ModuleName}</TableCell>
                       <TableCell align="center">{row.ModuleLevel}</TableCell>
                       <TableCell align="center">{row.ModuleCredit}</TableCell>
-                      <TableCell align="center">{row.Assesments}</TableCell>
-                      <TableCell align="center">{row.Grade}</TableCell>
-                      <TableCell align="center">{row.CreditAward}</TableCell>
                       <TableCell align="center">{row.Attempts}</TableCell>
-                      <TableCell align="center">{row.Status}</TableCell>
+                      <TableCell align="center">{row.AcceptanceDate}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -222,39 +262,21 @@ export default function Body1() {
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
+                      align="left"
                     >
                       Module Credit
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
-                    >
-                      Assesments
-                    </TableCell>
-                    <TableCell
-                      style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
-                    >
-                      Grade
-                    </TableCell>
-                    <TableCell
-                      style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
-                    >
-                      Credit Award
-                    </TableCell>
-                    <TableCell
-                      style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
+                      align="left"
                     >
                       Attempts
                     </TableCell>
                     <TableCell
                       style={{ fontWeight: "bold", color: "white" }}
-                      align="center"
+                      align="left"
                     >
-                      Status
+                      Acceptance Date
                     </TableCell>
                   </TableRow>
                 </TableHead>
@@ -265,11 +287,83 @@ export default function Body1() {
                       <TableCell align="center">{row.ModuleName}</TableCell>
                       <TableCell align="center">{row.ModuleLevel}</TableCell>
                       <TableCell align="center">{row.ModuleCredit}</TableCell>
-                      <TableCell align="center">{row.Assesments}</TableCell>
-                      <TableCell align="center">{row.Grade}</TableCell>
-                      <TableCell align="center">{row.CreditAward}</TableCell>
                       <TableCell align="center">{row.Attempts}</TableCell>
-                      <TableCell align="center">{row.Status}</TableCell>
+                      <TableCell align="center">{row.AcceptanceDate}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </Paper>
+        </center>
+        <div
+          style={{
+            textAlign: "left",
+            marginTop: "40px",
+            marginLeft: "4em",
+            whiteSpace: "pre-wrap",
+          }}
+        >
+          <h2 style={{ color: "#074A80", textAlign: "left" }}>
+            Summer Assessment Period
+          </h2>
+        </div>
+        <center>
+          <Paper elevation={6} style={{ width: "90%", marginTop: "2%" }}>
+            <TableContainer component={Paper}>
+              <Table
+                className={classes.table}
+                size="small"
+                aria-label="a dense table"
+              >
+                <TableHead style={{ backgroundColor: "#BF112B" }}>
+                  <TableRow>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
+                    >
+                      Module Code
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="center"
+                    >
+                      Module Name
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Module Level
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Module Credit
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Attempts
+                    </TableCell>
+                    <TableCell
+                      style={{ fontWeight: "bold", color: "white" }}
+                      align="left"
+                    >
+                      Acceptance Date
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {rows.map((row) => (
+                    <TableRow key={row.name}>
+                      <TableCell align="center">{row.ModuleCode}</TableCell>
+                      <TableCell align="center">{row.ModuleName}</TableCell>
+                      <TableCell align="center">{row.ModuleLevel}</TableCell>
+                      <TableCell align="center">{row.ModuleCredit}</TableCell>
+                      <TableCell align="center">{row.Attempts}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
@@ -278,6 +372,51 @@ export default function Body1() {
           </Paper>
         </center>
       </div>
+      <div
+        style={{
+          marginTop: "40px",
+          textAlign: "left",
+          marginLeft: "4em",
+          whiteSpace: "pre-wrap",
+        }}
+      >
+        <p>
+          To Complete your Registration you must press the "Accept" button
+          below. Once your Registration is accepted, you will be able to collect
+          your <br />
+          student ID card from Student Affairs IS services. Room 104 Bldg (E).
+          You will only be able to do this if you have paid your fees and, for
+          new students, <br />
+          provided all the relevant papers for your admission
+        </p>
+        <br />{" "}
+        <b>
+          I certify that the above programme details for my study this academic
+          year are correct. <br />I undertake to abide by the University's
+          Regulations, including the General Academic Regulations (GAR) and the
+          Examination and Assessment Regulations (EAR),
+          <br /> which are accessible via the BUE homepage.
+          <br /> I agree to read the Student Handbook (Accessible via the BUE
+          homepage) and to comply with relevant procedures and policies in
+          relation to my study. <br />I understand that all my communications
+          from the University in regard to my study will be sent to my BUE email
+          address including <br />
+          the outcomes of any academic appeal, impaired performance or academic
+          misconduct cases.
+          <br />I accept that, If I do not read my BUE email, any appeal that I
+          may make on the grounds that I was unaware of information sent to my
+          BUE email <br /> address will be rejected. I therefore agree to access
+          my BUE email and particularly during the examination & assessment
+          periods.
+        </b>
+      </div>
+      <Button
+        variant="contained"
+        color="secondary"
+        style={{ marginTop: "50px" }}
+      >
+        Save
+      </Button>
     </div>
   );
 }

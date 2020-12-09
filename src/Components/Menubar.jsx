@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
 export default function OutlinedButtons() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
-  const handleChange = () => {};
   return (
     <div className={classes.root}>
       <div style={{ marginBottom: "0px" }}>
@@ -20,6 +19,7 @@ export default function OutlinedButtons() {
           style={{ backgroundColor: "#BF112B", color: "white" }}
           variant="outlined"
           color="secondary"
+          href="/"
         >
           English Transcript
         </Button>
@@ -27,6 +27,7 @@ export default function OutlinedButtons() {
           variant="outlined"
           color="secondary"
           style={{ marginLeft: "15px" }}
+          href="/T"
         >
           Transcript (UK)
         </Button>
@@ -34,6 +35,7 @@ export default function OutlinedButtons() {
           variant="outlined"
           color="secondary"
           style={{ marginLeft: "15px" }}
+          href="/RC"
         >
           Registration Card
         </Button>
@@ -48,6 +50,7 @@ export default function OutlinedButtons() {
           variant="outlined"
           color="secondary"
           style={{ marginLeft: "15px" }}
+          href="/ES"
         >
           Exam Schedule
         </Button>
@@ -55,6 +58,7 @@ export default function OutlinedButtons() {
           variant="outlined"
           color="secondary"
           style={{ marginLeft: "15px" }}
+          href="/AF"
         >
           Alumni Form
         </Button>
@@ -62,6 +66,7 @@ export default function OutlinedButtons() {
           variant="outlined"
           color="secondary"
           style={{ marginLeft: "15px" }}
+          href="/PM"
         >
           Payment
         </Button>

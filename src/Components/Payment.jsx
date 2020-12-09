@@ -126,6 +126,7 @@ export default function Payment() {
         variant="contained"
         color="secondary"
         style={{ backgroundColor: "#074A80", bottom: "45px", right: "50px" }}
+        href="/P2"
       >
         Pay Now!
       </Button>

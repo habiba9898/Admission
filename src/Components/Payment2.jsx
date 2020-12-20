@@ -11,6 +11,7 @@ import Paper from "@material-ui/core/Paper";
 import "./body.css";
 import { Button } from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
+import { withStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -18,7 +19,14 @@ const useStyles = makeStyles((theme) => ({
       width: "25ch",
     },
   },
+
+  input: {
+    "&:invalid": {
+      border: "red solid 2px",
+    },
+  },
 }));
+
 export default function Payment2() {
   const classes = useStyles();
   return (
@@ -82,10 +90,8 @@ export default function Payment2() {
           </p>
           <p>Amount: </p>
           <TextField
-            id="outlined-basic"
-            label="The amount"
-            variant="outlined"
-            style={{ marginLeft: "120px", bottom: "50px" }}
+            style={{ left: "10%", bottom: "50px" }}
+            inputProps={{ className: classes.input, pattern: "[0-10]" }}
           />
           <Button
             variant="contained"
@@ -93,7 +99,7 @@ export default function Payment2() {
             style={{
               backgroundColor: "#BF112B",
               bottom: "45px",
-              left: "90px",
+              left: "150px",
             }}
           >
             Pay Now

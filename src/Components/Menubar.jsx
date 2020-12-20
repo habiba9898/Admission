@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 const useStyles = makeStyles((theme) => ({
@@ -8,19 +8,17 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+//changecolor = () => {return()};
+//style={{ backgroundColor: "#BF112B", color: "white" }}
 
 export default function OutlinedButtons() {
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
+
+  const [TestX, setTestX] = useState("");
   return (
     <div className={classes.root}>
       <div style={{ marginBottom: "0px" }}>
-        <Button
-          style={{ backgroundColor: "#BF112B", color: "white" }}
-          variant="outlined"
-          color="secondary"
-          href="/"
-        >
+        <Button variant="outlined" color="secondary" href="/">
           English Transcript
         </Button>
         <Button
@@ -43,6 +41,7 @@ export default function OutlinedButtons() {
           variant="outlined"
           color="secondary"
           style={{ marginLeft: "15px" }}
+          href="/L"
         >
           Lectures Schedule
         </Button>

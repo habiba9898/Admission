@@ -10,6 +10,7 @@ import ExamSchedule from "./Components/ExamSchedule.jsx";
 import Payment2 from "./Components/Payment2.jsx";
 import AlumniForm from "./Components/AlumniForm.jsx";
 import Transcript from "./Components/Transcript(UK)";
+import Lectures from "./Components/Lectures";
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,7 @@ function App() {
         <Route path="/AF" component={AlumniForm} />
         <Route path="/PM" component={Payment} />
         <Route path="/P2" component={Payment2} />
+        <Route path="/L" component={Lectures} />
       </Switch>
 
       <Footer />

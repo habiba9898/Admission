@@ -91,7 +91,7 @@ export default function Payment2() {
           <p>Amount: </p>
           <TextField
             style={{ left: "10%", bottom: "50px" }}
-            inputProps={{ className: classes.input, pattern: "[0-10]" }}
+            inputProps={{ className: classes.input, pattern: "" }}
           />
           <Button
             variant="contained"

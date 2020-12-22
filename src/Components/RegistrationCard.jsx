@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bue1 from "./pics/BUE.png";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
@@ -10,11 +10,13 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import "./body.css";
 import { Button } from "@material-ui/core";
+import axios from "axios";
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
   },
 });
+
 const rows = [
   {
     ModuleCode: "17CSC128H",
@@ -90,6 +92,23 @@ const rows = [
   },
 ];
 export default function RegistrationCard() {
+  const [studentID, setStudentID] = useState(120158);
+  const [data, setData] = useState();
+
+  const getStudentData = async () => {
+    const { data } = await axios.post(
+      `https://abed0cdf7531.ngrok.io/api/StudentPortal/GetStudentRegisterationCard?studentID=${studentID}`
+    );
+    setData(data);
+    console.log("aaa ", data);
+  };
+
+  React.useEffect(() => {
+    let mounted = true;
+    getStudentData();
+    return () => (mounted = false);
+  }, []);
+
   const classes = useStyles();
   return (
     <div>
@@ -105,6 +124,7 @@ export default function RegistrationCard() {
         ></img>
         <h2>Faculty of Informatics & Computer Science</h2>
         <br /> <h2 style={{ color: "#074A80" }}>Registration Card</h2>
+        <Button onClick={getStudentData()}>TEST API</Button>
         <hr
           style={{
             height: "1px",
@@ -124,7 +144,7 @@ export default function RegistrationCard() {
           Student ID: <b>163502</b> <br />{" "}
         </p>
         <p>
-          Student Name: <b>Habiba Khaled mansour </b>
+          Student Name: <b>{data ? data.item.studentName : null}</b>
           <br />{" "}
         </p>
         <p>

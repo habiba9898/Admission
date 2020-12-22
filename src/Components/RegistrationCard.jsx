@@ -93,20 +93,28 @@ const rows = [
 ];
 export default function RegistrationCard() {
   const [studentID, setStudentID] = useState(120158);
-  const [data, setData] = useState();
+  const [studentData, setStudentData] = useState();
 
-  const getStudentData = async () => {
-    const { data } = await axios.post(
-      `https://abed0cdf7531.ngrok.io/api/StudentPortal/GetStudentRegisterationCard?studentID=${studentID}`
-    );
-    setData(data);
-    console.log("aaa ", data);
+  const getStudentData = () => {
+    axios.post(
+        `https://abed0cdf7531.ngrok.io/api/StudentPortal/GetStudentRegisterationCard?studentID=${studentID}`
+      ).then(response => {
+      setStudentData(response.data.item);
+      console.log(JSON.stringify(response.data.item.modules));
+    });
   };
 
-  React.useEffect(() => {
-    let mounted = true;
+  useEffect(() => {
+    // axios.post(
+    //   `https://abed0cdf7531.ngrok.io/api/StudentPortal/GetStudentRegisterationCard?studentID=${studentID}`
+    // ).then(response => {
+    //   console.log(JSON.stringify(response));
+    //   setStudentData(response.data);
+    // });
     getStudentData();
-    return () => (mounted = false);
+    //let mounted = true;
+    //getStudentData();
+    //return () => (mounted = false);
   }, []);
 
   const classes = useStyles();
@@ -124,7 +132,7 @@ export default function RegistrationCard() {
         ></img>
         <h2>Faculty of Informatics & Computer Science</h2>
         <br /> <h2 style={{ color: "#074A80" }}>Registration Card</h2>
-        <Button onClick={getStudentData()}>TEST API</Button>
+        {/* <Button onClick={getStudentData()}>TEST API</Button> */}
         <hr
           style={{
             height: "1px",
@@ -144,11 +152,11 @@ export default function RegistrationCard() {
           Student ID: <b>163502</b> <br />{" "}
         </p>
         <p>
-          Student Name: <b>{data ? data.item.studentName : null}</b>
+          Student Name: <b>{studentData ? studentData.studentName : null}</b>
           <br />{" "}
         </p>
         <p>
-          Birth Date: <b> 15/8/1998</b>
+          Birth Date: <b>{studentData ? studentData.birthdate : null}</b>
           <br />{" "}
         </p>
         <p>
@@ -227,16 +235,16 @@ export default function RegistrationCard() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {rows.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.ModuleCode}</TableCell>
-                      <TableCell align="center">{row.ModuleName}</TableCell>
-                      <TableCell align="center">{row.ModuleLevel}</TableCell>
-                      <TableCell align="center">{row.ModuleCredit}</TableCell>
-                      <TableCell align="center">{row.Attempts}</TableCell>
-                      <TableCell align="center">{row.AcceptanceDate}</TableCell>
+                  {studentData ? studentData.modules.map((row) => (
+                    <TableRow>
+                      <TableCell align="center">{row.moduleCode}</TableCell>
+                      <TableCell align="center">{row.moduleName}</TableCell>
+                      <TableCell align="center">{row.moduleLevel}</TableCell>
+                      <TableCell align="center">{row.moduleCredit}</TableCell>
+                      <TableCell align="center">{row.attempts}</TableCell>
+                      <TableCell align="center">{row.acceptanceDate}</TableCell>
                     </TableRow>
-                  ))}
+                  )) : null}
                 </TableBody>
               </Table>
             </TableContainer>

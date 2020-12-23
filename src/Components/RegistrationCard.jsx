@@ -17,91 +17,93 @@ const useStyles = makeStyles({
   },
 });
 
-const rows = [
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-  {
-    ModuleCode: "17CSC128H",
-    ModuleName: "English Upper-Intermediate",
-    ModuleLevel: "P",
-    ModuleCredit: "10",
-    Attempts: "1",
-    AcceptanceDate: "30/9/2019, 16.29",
-  },
-];
+// const rows = [
+//   {
+//     ModuleCode: "17CSC128H",
+//     ModuleName: "English Upper-Intermediate",
+//     ModuleLevel: "P",
+//     ModuleCredit: "10",
+//     Attempts: "1",
+//     AcceptanceDate: "30/9/2019, 16.29",
+//   },
+//   {
+//     ModuleCode: "17CSC128H",
+//     ModuleName: "English Upper-Intermediate",
+//     ModuleLevel: "P",
+//     ModuleCredit: "10",
+//     Attempts: "1",
+//     AcceptanceDate: "30/9/2019, 16.29",
+//   },
+//   {
+//     ModuleCode: "17CSC128H",
+//     ModuleName: "English Upper-Intermediate",
+//     ModuleLevel: "P",
+//     ModuleCredit: "10",
+//     Attempts: "1",
+//     AcceptanceDate: "30/9/2019, 16.29",
+//   },
+//   {
+//     ModuleCode: "17CSC128H",
+//     ModuleName: "English Upper-Intermediate",
+//     ModuleLevel: "P",
+//     ModuleCredit: "10",
+//     Attempts: "1",
+//     AcceptanceDate: "30/9/2019, 16.29",
+//   },
+//   {
+//     ModuleCode: "17CSC128H",
+//     ModuleName: "English Upper-Intermediate",
+//     ModuleLevel: "P",
+//     ModuleCredit: "10",
+//     Attempts: "1",
+//     AcceptanceDate: "30/9/2019, 16.29",
+//   },
+//   {
+//     ModuleCode: "17CSC128H",
+//     ModuleName: "English Upper-Intermediate",
+//     ModuleLevel: "P",
+//     ModuleCredit: "10",
+//     Attempts: "1",
+//     AcceptanceDate: "30/9/2019, 16.29",
+//   },
+//   {
+//     ModuleCode: "17CSC128H",
+//     ModuleName: "English Upper-Intermediate",
+//     ModuleLevel: "P",
+//     ModuleCredit: "10",
+//     Attempts: "1",
+//     AcceptanceDate: "30/9/2019, 16.29",
+//   },
+//   {
+//     ModuleCode: "17CSC128H",
+//     ModuleName: "English Upper-Intermediate",
+//     ModuleLevel: "P",
+//     ModuleCredit: "10",
+//     Attempts: "1",
+//     AcceptanceDate: "30/9/2019, 16.29",
+//   },
+//   {
+//     ModuleCode: "17CSC128H",
+//     ModuleName: "English Upper-Intermediate",
+//     ModuleLevel: "P",
+//     ModuleCredit: "10",
+//     Attempts: "1",
+//     AcceptanceDate: "30/9/2019, 16.29",
+//   },
+// ];
 export default function RegistrationCard() {
   const [studentID, setStudentID] = useState(120158);
   const [studentData, setStudentData] = useState();
 
   const getStudentData = () => {
-    axios.post(
-        `https://abed0cdf7531.ngrok.io/api/StudentPortal/GetStudentRegisterationCard?studentID=${studentID}`
-      ).then(response => {
-      setStudentData(response.data.item);
-      console.log(JSON.stringify(response.data.item.modules));
-    });
+    axios
+      .post(
+        `https://bb2f4278d37e.ngrok.io/api/StudentPortal/GetStudentRegisterationCard?studentID=${studentID}`
+      )
+      .then((response) => {
+        setStudentData(response.data.item);
+        console.log(JSON.stringify(response.data.item.modules));
+      });
   };
 
   useEffect(() => {
@@ -160,11 +162,11 @@ export default function RegistrationCard() {
           <br />{" "}
         </p>
         <p>
-          Nationality: <b>Egypt</b>
+          Nationality: <b>Egyptian</b>
           <br />{" "}
         </p>
         <p>
-          Faculty:<b>:Faculty of Informatics & Computer Science</b>
+          Faculty:<b>{studentData ? studentData.faculty : null}</b>
           <br />{" "}
         </p>
         <p>
@@ -235,16 +237,24 @@ export default function RegistrationCard() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {studentData ? studentData.modules.map((row) => (
-                    <TableRow>
-                      <TableCell align="center">{row.moduleCode}</TableCell>
-                      <TableCell align="center">{row.moduleName}</TableCell>
-                      <TableCell align="center">{row.moduleLevel}</TableCell>
-                      <TableCell align="center">{row.moduleCredit}</TableCell>
-                      <TableCell align="center">{row.attempts}</TableCell>
-                      <TableCell align="center">{row.acceptanceDate}</TableCell>
-                    </TableRow>
-                  )) : null}
+                  {studentData
+                    ? studentData.modules.map((row) => (
+                        <TableRow>
+                          <TableCell align="center">{row.moduleCode}</TableCell>
+                          <TableCell align="center">{row.moduleName}</TableCell>
+                          <TableCell align="center">
+                            {row.moduleLevel}
+                          </TableCell>
+                          <TableCell align="center">
+                            {row.moduleCredit}
+                          </TableCell>
+                          <TableCell align="center">{row.attempts}</TableCell>
+                          <TableCell align="center">
+                            {row.acceptanceDate}
+                          </TableCell>
+                        </TableRow>
+                      ))
+                    : null}
                 </TableBody>
               </Table>
             </TableContainer>

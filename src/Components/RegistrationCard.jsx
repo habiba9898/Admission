@@ -319,16 +319,23 @@ export default function RegistrationCard() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {rows.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.ModuleCode}</TableCell>
-                      <TableCell align="center">{row.ModuleName}</TableCell>
-                      <TableCell align="center">{row.ModuleLevel}</TableCell>
-                      <TableCell align="center">{row.ModuleCredit}</TableCell>
-                      <TableCell align="center">{row.Attempts}</TableCell>
-                      <TableCell align="center">{row.AcceptanceDate}</TableCell>
+                  {studentData
+                    ? studentData.modules.map((row) => (
+                      <TableRow>
+                        <TableCell align="center">{row.moduleCode}</TableCell>
+                        <TableCell align="center">{row.moduleName}</TableCell>
+                        <TableCell align="center">
+                          {row.moduleLevel}
+                        </TableCell>
+                        <TableCell align="center">
+                          {row.moduleCredit}
+                        </TableCell>
+                        <TableCell align="center">{row.attempts}</TableCell>
+                        <TableCell align="center">
+                          {row.acceptanceDate}
+                        </TableCell>
                     </TableRow>
-                  ))}
+                  )) : null}
                 </TableBody>
               </Table>
             </TableContainer>
@@ -395,15 +402,23 @@ export default function RegistrationCard() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {rows.map((row) => (
-                    <TableRow key={row.name}>
-                      <TableCell align="center">{row.ModuleCode}</TableCell>
-                      <TableCell align="center">{row.ModuleName}</TableCell>
-                      <TableCell align="center">{row.ModuleLevel}</TableCell>
-                      <TableCell align="center">{row.ModuleCredit}</TableCell>
-                      <TableCell align="center">{row.Attempts}</TableCell>
+                  {studentData
+                    ? studentData.modules.map((row) => (
+                    <TableRow>
+                        <TableCell align="center">{row.moduleCode}</TableCell>
+                        <TableCell align="center">{row.moduleName}</TableCell>
+                        <TableCell align="center">
+                          {row.moduleLevel}
+                        </TableCell>
+                        <TableCell align="center">
+                          {row.moduleCredit}
+                        </TableCell>
+                        <TableCell align="center">{row.attempts}</TableCell>
+                        <TableCell align="center">
+                          {row.acceptanceDate}
+                        </TableCell>
                     </TableRow>
-                  ))}
+                  )) : null}
                 </TableBody>
               </Table>
             </TableContainer>
